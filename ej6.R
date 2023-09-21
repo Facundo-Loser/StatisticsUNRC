@@ -40,9 +40,25 @@ proba <- pexp(4.8, rate = lambda)
 res <- paste("P(X >= DESV(X)) = ", proba)
 res
 
-#9)
+#9) T ~ exponencial(3)
+lambda <- 3
+
+#P(T <= 5)
+proba <- pexp((5/60), rate = lambda)
+res <- paste("P(T <= 5) = ", proba)
+res
+
 
 #10) X ~ gamma(9, 3/4)
+
+#Análisis:
+#Tengo como datos: E(X) = 12, DESV(X) = 4
+#Hago un sistema y resuelvo por sustitución:
+
+#{ 12 = α/λ
+#{ 4 = sqrt(α/λ^2)
+
+#Luego de aquí se obtiene: α = 9 y λ = 3/4
 
 #parámetro de forma:
 forma <- 9      
