@@ -1,11 +1,11 @@
-#Ejercicio 6 - tp3
+##Ejercicio 6 - tp3
 
 #X ~  N(85.3, (2.7)^2)
 print("Ejercicio 6 - X ~  N(85.3, (2.7)^2)")
 
 #6)a) P(X > 100) = 1 - P(X <= 100) = 1 - F(100)
 proba <- 1 - pnorm(100, mean = 85.3, sd = sqrt(2.7))
-res <- paste("P(X <= 100) = ", proba)
+res <- paste("P(X > 100) = ", proba)
 res
 
 #6)c) P(82.6 <= X <= 88) = F(88) = F(82.6) = P(X <= 88) - P(X <= 82.6)
@@ -39,7 +39,7 @@ res
 #DESV(X) = sqrt(5.76) = 2.4   --> 2*DESV(X) = 4.8
 
 proba <- pexp(4.8, rate = lambda)
-res <- paste("P(X >= DESV(X)) = ", proba)
+res <- paste("P(X >= 2*DESV(X)) = ", proba)
 res
 
 #9) T ~ exponencial(3)
