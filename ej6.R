@@ -1,6 +1,7 @@
 #Ejercicio 6 - tp3
 
 #X ~  N(85.3, (2.7)^2)
+print("Ejercicio 6 - X ~  N(85.3, (2.7)^2)")
 
 #6)a) P(X > 100) = 1 - P(X <= 100) = 1 - F(100)
 proba <- 1 - pnorm(100, mean = 85.3, sd = sqrt(2.7))
@@ -17,6 +18,7 @@ res
 #dato: E(X) = 2.4
 
 #X ~ exponencial(1/2.4) = X ~ N(1,1/2.4)
+print("Ejercicio 8 - X ~ exponencial(1/2.4) = X ~ N(1,1/2.4)")
 lambda <- 1/2.4
 
 #8)a) P(X > 3) = 1 - P(X <= 3) = 1 - F(3)
@@ -41,6 +43,7 @@ res <- paste("P(X >= DESV(X)) = ", proba)
 res
 
 #9) T ~ exponencial(3)
+print("Ejercicio 9 - T ~ exponencial(3)")
 lambda <- 3
 
 #P(T <= 5)
@@ -50,6 +53,7 @@ res
 
 
 #10) X ~ gamma(9, 3/4)
+print("Ejercicio 10 - X ~ gamma(9, 3/4)")
 
 #Análisis:
 #Tengo como datos: E(X) = 12, DESV(X) = 4
