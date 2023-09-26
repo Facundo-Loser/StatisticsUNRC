@@ -1,15 +1,25 @@
-##Ejercicio 6 - tp3
+#Ejercicio 6 - tp3
 
 #X ~  N(85.3, (2.7)^2)
 print("Ejercicio 6 - X ~  N(85.3, (2.7)^2)")
 
 #6)a) P(X > 100) = 1 - P(X <= 100) = 1 - F(100)
-proba <- 1 - pnorm(100, mean = 85.3, sd = sqrt(2.7))
+proba <- 1 - pnorm(100, mean = 85.3, sd = 2.7)
 res <- paste("P(X > 100) = ", proba)
 res
 
+#6)b) P(X < x0) = 0.95 (Hay que hallar el cuantil)
+x0 <- qnorm(0.95, mean = 85.3, sd = 2.7)
+res <- paste("El valor de x0 es: ", x0)
+res
+
+#para corroborar:
+proba <- pnorm(x0, mean = 85.3, sd = 2.7)
+res <- paste("P(X < 0.89) = ", proba)
+res
+
 #6)c) P(82.6 <= X <= 88) = F(88) = F(82.6) = P(X <= 88) - P(X <= 82.6)
-proba <- pnorm(88, mean = 85.3, sd = sqrt(2.7)) - pnorm(82.6, mean = 85.3, sd = sqrt(2.7))
+proba <- pnorm(88, mean = 85.3, sd = 2.7) - pnorm(82.6, mean = 85.3, sd = 2.7)
 res <- paste("P(82.6 <= X <= 88) = ", proba)
 res
 
@@ -70,6 +80,6 @@ forma <- 9
 escala <- (3/4)
 
 #P(8 <= X <= 10) = F(10) - F(8) = P(X <= 10) - P(X <= 8)
-proba <- pgamma(10, shape = forma, scale = escala) - pgamma(8, shape = forma, scale = escala)
+proba <- pgamma(10, shape = forma, rate = escala) - pgamma(8, shape = forma, rate = escala)
 res <- paste("P(8 <= X <= 10) = ", proba)
 res

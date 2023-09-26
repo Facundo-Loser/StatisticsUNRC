@@ -66,3 +66,31 @@ x2 = c(1.2,x2,20)
 y2 = c(0,y2,0)
 polygon(x2,y2, col="blue", border=NA)
 
+
+
+#5)c)
+
+#Y ~ N(2,16)
+#P(Y >= z0)
+
+z0 <- qnorm(0.117, mean = 2, sd = 4, lower.tail = FALSE)
+res <- paste("el valor de z0 es: ", z0)
+res
+
+#Z ~ N(0,1)
+z0neg <- qnorm(0.05, mean = 0, sd = 1)
+z0 <- qnorm(0.95, mean = 0, sd = 1)
+res <- paste("el valor de -z0 es: ", z0neg, " y el valor de z0 es: ", z0)
+res
+
+#X ~ N(0, 0.01)
+z0neg <- qnorm(0.05, mean = 0, sd = sqrt(0.01))
+z0 <- qnorm(0.95, mean = 0, sd = sqrt(0.01))
+res <- paste("El valor de -z0 es: ", z0neg, " y el valor de z0 es: ", z0)
+res
+
+#5)d) X ~ gamma(4,2)
+z0 <- qgamma(0.84, shape = 4, rate = 2)
+z1 <- qgamma(0.16, shape = 4, rate = 2)
+res <- paste("El valor de z0 es: ", z0, " y el valor de z1 es: ", z1)
+res
